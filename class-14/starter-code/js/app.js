@@ -8,6 +8,7 @@ var Cart = function(items) {
 
 Cart.prototype.addItem = function(product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+//function that adds a product from the drop down menu and qty to the Cart
 };
 
 Cart.prototype.saveToLocalStorage = function() {
@@ -22,6 +23,10 @@ Cart.prototype.removeItem = function(item) {
 var CartItem = function(product, quantity) {
   this.product = product;
   this.quantity = quantity;
+
+  // Product.allProducts.push(this);
+  // console.log(Product.allProducts);
+  // CartItem.quantity.push(this);
 };
 
 // Product contructor.
@@ -31,6 +36,8 @@ var Product = function(filePath, name) {
   Product.allProducts.push(this);
 };
 Product.allProducts = [];
+
+
 
 function generateCatalog() {
   new Product('assets/bag.jpg', 'Bag');
@@ -57,3 +64,5 @@ function generateCatalog() {
 
 // Initialize the app by creating the big list of products with images and names
 generateCatalog();
+
+// console.log(Product.allProducts.name);
